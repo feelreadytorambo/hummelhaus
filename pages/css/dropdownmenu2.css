@@ -1,0 +1,54 @@
+#menu{
+	color: white;
+	position: fixed;
+	width: 200px;
+	height: 100%;
+	background: rgb(65, 65, 65);
+	margin: 0;
+	text-align: center;
+	opacity: 1;
+	font-family: monospace;
+	margin-top: 0px;
+}
+
+#menu #posDiv{
+	color: white;
+	position: fixed;
+	width: 200px;
+	height: 50px;
+	background: rgb(40, 40, 40);
+	margin: 0;
+	text-align: center;
+	opacity: 1;
+	font-family: monospace;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+#menu #posDiv ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#menu #posDiv ul li{
+	display: inline-block;
+	padding: 17px;
+}
+
+#menu #posDiv ul ul{
+	background-color: rgb(40, 40, 40);;
+	display: none;
+	margin-top: -3px;
+}
+
+#menu #posDiv ul ul li{
+	cursor: pointer;
+	text-decoration-style: none;
+}
+
+#menu #posDiv ul ul li a{
+	text-decoration-style: none;
+	color: white;
+}

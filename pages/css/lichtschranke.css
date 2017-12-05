@@ -1,0 +1,94 @@
+body{
+  margin: 0 auto;
+  background-color: rgb(90, 90, 90);
+}
+
+#mainDiv{
+  width: 950px;
+  height: 850px;
+  margin-left: 250px;
+  opacity: 0.6;
+  color: white;
+}
+
+#mainDiv h3{
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+#mainDiv #lichtDiagramm{
+  height: 510px;
+  width: 890px;
+  border-radius: 15px 50px 30px;
+  margin-left: 30px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+#mainDiv #lichtDiagramm label{
+  font-family: monospace;
+  font-size: 15px;
+}
+
+#mainDiv #lichtDiagramm .title{
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+#mainDiv #lichtDiagramm #diagramm{
+  width: 830px;
+  height: 415px;
+  margin-left: 30px;
+  margin-top: 0px;
+  opacity: 1;
+  text-align: left;
+}
+
+#mainDiv #lichtDiagramm #line-graph{
+  background-color: white;
+  margin-top: 20px;
+}
+
+#mainDiv #lichtRecord{
+  height: 270px;
+  width: 890px;
+  border-radius: 15px 50px 30px;
+  background-color: black;
+  margin-left: 30px;
+  margin-top: 250px;
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+}
+
+#mainDiv #lichtRecord label{
+  font-family: monospace;
+  font-size: 15px;
+}
+
+#mainDiv #lichtRecord .title{
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+#mainDiv #lichtRecord table{
+  border-collapse: collapse;
+  text-align: left;
+  width: 830px;
+  margin-left: 30px;
+  color: white;
+}
+
+#mainDiv #lichtRecord th{
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 15px;
+}
+
+#mainDiv #lichtRecord td{
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 7px;
+}

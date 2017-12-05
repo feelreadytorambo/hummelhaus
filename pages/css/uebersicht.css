@@ -1,0 +1,81 @@
+body{
+	margin: 0 auto;
+	background-color: rgb(90, 90, 90);
+}
+
+#temperatur{
+	height: 200px;
+	width: 400px;
+	margin-top: 130px;
+	opacity: 0.6;
+	background-color: black;
+	margin-left: 230px;
+	border-radius: 15px 50px 30px;
+	display: block
+	padding: 20px;
+}
+
+#temperatur label{
+	color: white;
+	width: 150px;
+	font-family: monospace;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+#temperatur .title{
+	font-family: sans-serif;
+	width: 400px;
+	font-size: 20px;
+	padding: 20px;
+}
+
+#luftdruck{
+	height: 200px;
+	width: 400px;
+	margin-top: 30px;
+	margin-left: 230px;
+	opacity: 0.6;
+	background-color: black;
+	border-radius: 15px 50px 30px;
+}
+
+#luftdruck label{
+	color: white;
+	width: 150px;
+	font-family: monospace;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+#luftdruck .title{
+	font-family: sans-serif;
+	width: 400px;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+#luftfeuchtigkeit{
+	height: 200px;
+	width: 400px;
+	margin-top: 30px;
+	margin-left: 230px;
+	opacity: 0.6;
+	background-color: black;
+	border-radius: 15px 50px 30px;
+	margin-bottom: 50px;
+}
+
+#luftfeuchtigkeit label{
+	color: white;
+	width: 150px;
+	font-family: monospace;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+#luftfeuchtigkeit .title{
+	font-family: sans-serif;
+	width: 400px;
+	font-size: 20px;
+}

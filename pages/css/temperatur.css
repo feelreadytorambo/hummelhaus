@@ -1,0 +1,95 @@
+body{
+  margin: 0 auto;
+  background-color: rgb(90, 90, 90);
+}
+
+div{
+  width: 950px;
+  height: 850px;
+  margin-left: 250px;
+  opacity: 0.6;
+  margin-bottom: 50px;
+}
+
+div h3{
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+div #tempRecord{
+  height: 270px;
+  width: 890px;
+  border-radius: 15px 50px 30px;
+  background-color: black;
+  margin-left: 30px;
+  margin-top: 250px;
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+}
+
+div #tempDiagram{
+  height: 510px;
+  width: 890px;
+  background-color: black;
+  margin-left: 30px;
+  border-radius: 15px 50px 30px;
+  text-align: center;
+  color: white;
+}
+
+div #tempDiagram #diagramm{
+  width: 830px;
+  height: 415px;
+  margin-left: 30px;
+  margin-top: 0px;
+  opacity: 1;
+  text-align: left;
+}
+
+div #tempDiagram  #diagramm #line-graph{
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+div #tempRecord label{
+  font-family: monospace;
+  font-size: 15px;
+}
+
+div #tempRecord .title{
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+div #tempDiagram label{
+  font-family: monospace;
+  font-size: 15px;
+}
+
+div #tempDiagram .title{
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+div #tempRecord table{
+  border-collapse: collapse;
+  text-align: left;
+  width: 830px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+div #tempRecord th{
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 15px;
+}
+
+div #tempRecord td{
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 7px;
+}

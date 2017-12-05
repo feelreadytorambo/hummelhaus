@@ -1,0 +1,156 @@
+<html>
+	<link rel="stylesheet" type="text/css" href="css/dropdownmenu3.css">
+  <link rel="stylesheet" type="text/css" href="css/lichtschranke.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+  <head>
+    <title>Lichtschranke</title>
+    <div id="menu">
+      <div id="posDiv">
+        <ul id="toHover">
+          <li id="li1">Sensoren</li>
+          <ul id="toSlide">
+            <li><a href="http://hummelhaus.ddns.net/pages/luftdruck.html">Luftdruck</a></li>
+            <li><a href="http://hummelhaus.ddns.net/pages/luftfeuchtigkeit.html">Luftfeuchtigkeit</a></li>
+            <li><a href="http://hummelhaus.ddns.net/pages/temperatur.html">Temperatur</a></li>
+            <li><a href="http://hummelhaus.ddns.net/pages/lichtschranke.html">Lichtschranke</a></li>
+            <li><a href="http://hummelhaus.ddns.net/pages/livekamera.html">Live-Kamera</a></li>
+            <li><a href="http://hummelhaus.ddns.net/pages/uebersicht.html">Uebersicht</a></li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#toHover").mouseenter(function(){
+                $("#toSlide").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $("#toHover").mouseleave(function(){
+                $("#toSlide").slideToggle("slow");
+            });
+        });
+    </script>
+  </head>
+
+  <body>
+    <div id="mainDiv"><br>
+      <h3>Lichtschranke</h3>
+      <div id="lichtDiagramm"><br>
+        <label class="title">Lichtschranke - Vergleich</label>
+        <div id="diagramm">
+          <canvas id="line-graph"></canvas>
+        </div>
+      </div>
+      <div id="lichtRecord"><br>
+        <label class="title">Lichtschranke - Aufzeichnungen</label><br><br>
+        <table>
+          <tr>
+            <th>Datum</th>
+            <th>Hummeln rein</th>
+            <th>Hummeln raus</th>
+          </tr>
+          <tr>
+            <td id="date1">1.1.2017</td>
+            <td id="hIn1">198</td>
+            <td id="hOut1">201</td>
+          </tr>
+          <tr>
+            <td id="date2">2.1.2017</td>
+            <td id="hIn2">193</td>
+            <td id="hOut2">213</td>
+          </tr>
+          <tr>
+            <td id="date3">3.1.2017</td>
+            <td id="hIn3">215</td>
+            <td id="hOut3">196</td>
+          </tr>
+          <tr>
+            <td id="date4">4.1.2017</td>
+            <td id="hIn4">199</td>
+            <td id="hOut4">202</td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript">
+
+        var tablePosts = [["1.1.2017", "194", "214"],
+                          ["2.1.2017", "199", "202"],
+                          ["3.1.2017", "216", "197"],
+                          ["4.1.2017", "200", "203"]];
+
+        var dataset1 = [34, 33, 37, 31, 29, 27, 29]
+        var dataset2 = [31, 35, 31, 28, 34, 28, 24]
+        var dataset3 = [33, 28, 32, 27, 31, 37, 34]
+
+        var diagrammOptions = {
+          type: 'line',
+          data: {
+            labels: ["0.00 Uhr", "4.00 Uhr", "8.00 Uhr", "12.00 Uhr", "16.00 Uhr", "20.00 Uhr", "24.00 Uhr"],
+            datasets: [{
+              label: "Heute",
+              borderColor: "#bc1414",
+              fill: true,
+              data: dataset1
+            },
+          {
+              label: "Gestern",
+              borderColor: "#14bc36",
+              fill: true,
+              data: dataset2
+          },
+        {
+              label: "Vorgestern",
+              borderColor: "#1447bc",
+              fill: true,
+              data: dataset3
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Lichtschranke - Vergleich"
+        }
+      }
+    };
+        window.onload = function () {
+
+          var ctx = document.getElementById("line-graph");
+          var chart = new Chart(ctx, diagrammOptions);
+
+          var d1 = document.getElementById("date1");
+          var d2 = document.getElementById("date2");
+          var d3 = document.getElementById("date3");
+          var d4 = document.getElementById("date4");
+
+          var hIn1 = document.getElementById("hIn1");
+          var hIn2 = document.getElementById("hIn2");
+          var hIn3 = document.getElementById("hIn3");
+          var hIn4 = document.getElementById("hIn4");
+
+          var hOut1 = document.getElementById("hOut1");
+          var hOut2 = document.getElementById("hOut2");
+          var hOut3 = document.getElementById("hOut3");
+          var hOut4 = document.getElementById("hOut4");
+
+          d1.innerHTML = tablePosts[0][0];
+          d2.innerHTML = tablePosts[1][0];
+          d3.innerHTML = tablePosts[2][0];
+          d4.innerHTML = tablePosts[3][0];
+
+          hIn1.innerHTML = tablePosts[0][1];
+          hIn2.innerHTML = tablePosts[1][1];
+          hIn3.innerHTML = tablePosts[2][1];
+          hIn4.innerHTML = tablePosts[3][1];
+
+          hOut1.innerHTML = tablePosts[0][2];
+          hOut2.innerHTML = tablePosts[1][2];
+          hOut3.innerHTML = tablePosts[2][2];
+          hOut4.innerHTML = tablePosts[3][2];
+
+        }
+      </script>
+    </div>
+  </body>
+</html>

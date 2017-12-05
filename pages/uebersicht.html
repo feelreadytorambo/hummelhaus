@@ -1,0 +1,85 @@
+<html>
+	<link rel="stylesheet" type="text/css" href="css/dropdownmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/uebersicht.css">
+	<script type="text/javascript" src="js/uebersicht.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<head>
+		<title>Das Hummelhaus</title>
+		<div id="menu">
+			<div id="posDiv">
+				<ul id="toHover">
+					<li id="li1">Sensoren</li>
+					<ul id="toSlide">
+						<li><a href="http://hummelhaus.ddns.net/pages/luftdruck.html">Luftdruck</a></li>
+						<li><a href="http://hummelhaus.ddns.net/pages/luftfeuchtigkeit.html">Luftfeuchtigkeit</a></li>
+						<li><a href="http://hummelhaus.ddns.net/pages/temperatur.html">Temperatur</a></li>
+						<li><a href="http://hummelhaus.ddns.net/pages/lichtschranke.html">Lichtschranke</a></li>
+						<li><a href="http://hummelhaus.ddns.net/pages/livekamera.html">Live-Kamera</a></li>
+						<li><a href="http://hummelhaus.ddns.net/pages/uebersicht.html">Uebersicht</a></li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+				$(document).ready(function(){
+    				$("#toHover").mouseenter(function(){
+        				$("#toSlide").slideToggle("slow");
+    				});
+				});
+				$(document).ready(function(){
+    				$("#toHover").mouseleave(function(){
+        				$("#toSlide").slideToggle("slow");
+    				});
+				});
+		</script>
+	</head>
+
+	<body>
+		<div id="temperatur" class="sensor"><br>
+			<label class="title">Temperatur</label><br><br><br>
+			<label>Aktuelle Temperatur: </label>
+			<label id="curTemp">N/A</label><br><br>
+			<label>Heutiger Durchschnitt: </label>
+			<label id="avgTemp">N/A</label>
+		</div>
+
+		<div id="luftdruck" class="sensor"><br>
+			<label class="title">Luftdruck</label><br><br><br>
+			<label>Aktueller Luftdruck: </label>
+			<label id="curAirD">N/A</label><br><br>
+			<label>Heutiger Durchschnitt: </label>
+			<label id="avgAirD">N/A</label>
+		</div>
+
+		<div id="luftfeuchtigkeit" class="sensor"><br>
+			<label class="title">Luftfeuchtigkeit</label><br><br><br>
+			<label>Aktuelle Luftfeuchtigkeit: </label>
+			<label id="curAirF">N/A</label><br><br>
+			<label>Heutiger Durchschnitt: </label>
+			<label id="avgAirF">N/A</label>
+
+			<script type="text/javascript">
+
+				var curTemp = "0°C";
+				var tempAvg = "0°C";
+
+				var curDruk = "1000 hPa";
+				var avgDruk = "1000 hPa";
+
+				var curHumi = "4.7 g/m³";
+				var avgHumi = "4.7 g/m³";
+
+				document.getElementById("curTemp").innerHTML = curTemp;
+				document.getElementById("avgTemp").innerHTML = tempAvg;
+
+				document.getElementById("curAirD").innerHTML = curDruk;
+				document.getElementById("avgAirD").innerHTML = avgDruk;
+
+				document.getElementById("curAirF").innerHTML = curHumi;
+				document.getElementById("avgAirF").innerHTML = avgHumi;
+
+			</script>
+		</div>
+	</body>
+</html>
